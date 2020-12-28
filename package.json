@@ -22,9 +22,7 @@
         "lint:styles": "stylelint \"src/**/*.scss\" --syntax=scss",
         "lint:styles --fix": "stylelint \"src/**/*.scss\" --syntax=scss --fix",
         "lint:scripts": "eslint --color ./src/blocks",
-        "lint:scripts --fix": "eslint --fix --color ./src/blocks",
-        "bem-c": "bem create $* -l src/blocks/components",
-        "bem-m": "bem create $* -l src/blocks/modules"
+        "lint:scripts --fix": "eslint --fix --color ./src/blocks"
     },
     "devDependencies": {
         "@babel/core": "^7.4.3",
@@ -32,8 +30,6 @@
         "@babel/register": "^7.4.0",
         "babel-eslint": "^10.0.1",
         "babel-loader": "^8.0.5",
-        "bem-tools-core": "bem-tools/bem-tools-core",
-        "bem-tools-create": "bem-tools/bem-tools-create",
         "browser-sync": "^2.23.6",
         "del": "^5.1.0",
         "gulp": "^4.0.0",
@@ -54,7 +50,6 @@
         "gulp-svg-sprite": "^1.5.0",
         "gulp-watch": "^5.0.0",
         "gulp-webp": "^4.0.1",
-        "husky": "^4.2.1",
         "imagemin-giflossy": "^5.1.10",
         "imagemin-jpeg-recompress": "^7.0.0",
         "imagemin-mozjpeg": "^9.0.0",
@@ -72,11 +67,6 @@
     },
     "dependencies": {
         "smart-grid": "^2.1.2"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
     },
     "lint-staged": {
         "!(_*).scss": [
